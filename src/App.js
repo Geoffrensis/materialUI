@@ -1,7 +1,7 @@
 import Header from './components/Header/Header';
 import './App.css';
-import { Card } from '@mui/material';
 import MediaCard from './components/Card/MediaCard';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
     <div className='App'>
       <Header />
       <MediaCard />
+      <Footer />
     </div>
   );
 }
