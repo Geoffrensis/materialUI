@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Input from '../Input/Input';
 
 
 const products = [
@@ -76,7 +77,7 @@ export default function MediaCard() {
          <Card key={index} sx={{ maxWidth: 345, margin: '10px', display: 'inline-block' }}>
             <CardMedia
                sx={{ height: 140 }}
-               image={product.imageUrl}   
+               image={product.imageUrl}
                title="green iguana"
             />
             <CardContent>

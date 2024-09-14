@@ -12,14 +12,17 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { StyledContainer } from './styled';
+import { useNavigate } from 'react-router-dom';
 
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
+
 function Header() {
    const [anchorElNav, setAnchorElNav] = React.useState(null);
    const [anchorElUser, setAnchorElUser] = React.useState(null);
+   const navigate = useNavigate();
 
    const handleOpenNavMenu = (event) => {
       setAnchorElNav(event.currentTarget);
@@ -46,6 +49,9 @@ function Header() {
                   noWrap
                   component="a"
                   href="#app-bar-with-responsive-menu"
+                  onClick={() => {
+                     navigate('/');
+                  }}
                   sx={{
                      mr: 2,
                      display: { xs: 'none', md: 'flex' },
@@ -116,7 +122,9 @@ function Header() {
                   {pages.map((page) => (
                      <Button
                         key={page}
-                        onClick={handleCloseNavMenu}
+                        onClick={() => {
+                           navigate(`/${page}`)
+                        }}
                         sx={{ my: 2, color: 'white', display: 'block' }}
                      >
                         {page}

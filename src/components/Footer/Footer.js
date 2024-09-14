@@ -3,9 +3,9 @@ import React from 'react'
 
 export default function Footer() {
    return (
-      <Container maxWidth="xl" sx={{ backgroundColor: 'black', color: 'white' }}>
+      <Container maxWidth="100%" sx={{ backgroundColor: 'black', color: 'white',height: '60px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
          <Typography>
-            © 2022
+            © 2024 Copyright:
          </Typography>
       </Container>
    )
